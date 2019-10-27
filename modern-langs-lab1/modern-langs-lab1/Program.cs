@@ -29,10 +29,20 @@ namespace modern_langs_lab1
             Console.WriteLine(birsday.Subtract(today).Days);
         }
 
+        static void IndividualTask()
+        {
+            double a = 0.03;
+            double b = 4.83;
+            double c = 0.072;
+            double result = (Math.Log(b+c, Math.E)*a)/(b-Math.Asin(b*c));
+            Console.Write(result);
+        }
+
         static void Main(string[] args)
         {
             Task1();
             Task2();
+            IndividualTask();
         }
     }
 }
