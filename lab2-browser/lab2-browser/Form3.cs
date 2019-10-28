@@ -25,16 +25,21 @@ namespace lab2_browser
 
         private void Draw()
         {
+            int heightP = picture.Height / 2;
+            int widthP = picture.Width / 2;
+
             Point[] points = new Point[5];
-            points[0] = new Point(50, 20);//x,y
-            points[1] = new Point(70, 40);
-            points[2] = new Point(60, 60);
-            points[3] = new Point(40, 60);
-            points[4] = new Point(30, 40);
+
+            points[0] = new Point(picture.Width-(widthP/2), 5);//x,y
+            points[1] = new Point(picture.Width, heightP/2);
+            points[2] = new Point(picture.Width - (widthP / 4), heightP);
+            points[3] = new Point(picture.Width - (widthP - (widthP/4)), heightP);
+            points[4] = new Point(picture.Width-widthP, heightP / 2);
 
             Bitmap bitmap = new Bitmap(picture.Width, picture.Height);
             Graphics graphics = Graphics.FromImage(bitmap);
-            graphics.DrawPolygon(Pens.Black, points);
+            //graphics.DrawPolygon(Pens.Black, points);
+            graphics.FillPolygon(Brushes.Blue, points);
             picture.Image = bitmap;
         }
 
