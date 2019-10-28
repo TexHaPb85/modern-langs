@@ -40,10 +40,11 @@
             this.впередToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.назадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.додомуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.choosenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.blockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.введітьПосиланняДляБлокуванняToolStripMenuItem = new System.Windows.Forms.ToolStripTextBox();
             this.authorMishkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.обраніСайтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.заблокуватиСайтToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.малюнокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,7 +98,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.навігаторToolStripMenuItem,
             this.обранеToolStripMenuItem,
-            this.довідкаToolStripMenuItem});
+            this.довідкаToolStripMenuItem,
+            this.малюнокToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -117,8 +119,8 @@
             // обранеToolStripMenuItem
             // 
             this.обранеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.choosenToolStripMenuItem,
-            this.blockToolStripMenuItem});
+            this.обраніСайтиToolStripMenuItem,
+            this.заблокуватиСайтToolStripMenuItem});
             this.обранеToolStripMenuItem.Name = "обранеToolStripMenuItem";
             this.обранеToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.обранеToolStripMenuItem.Text = "обране";
@@ -152,40 +154,48 @@
             this.додомуToolStripMenuItem.Text = "додому";
             this.додомуToolStripMenuItem.Click += new System.EventHandler(this.додомуToolStripMenuItem_Click);
             // 
-            // choosenToolStripMenuItem
-            // 
-            this.choosenToolStripMenuItem.Name = "choosenToolStripMenuItem";
-            this.choosenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.choosenToolStripMenuItem.Text = "choosen";
-            this.choosenToolStripMenuItem.Click += new System.EventHandler(this.choosenToolStripMenuItem_Click);
-            // 
-            // blockToolStripMenuItem
-            // 
-            this.blockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.введітьПосиланняДляБлокуванняToolStripMenuItem});
-            this.blockToolStripMenuItem.Name = "blockToolStripMenuItem";
-            this.blockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.blockToolStripMenuItem.Text = "block";
-            this.blockToolStripMenuItem.Click += new System.EventHandler(this.blockToolStripMenuItem_Click);
-            // 
-            // введітьПосиланняДляБлокуванняToolStripMenuItem
-            // 
-            this.введітьПосиланняДляБлокуванняToolStripMenuItem.Name = "введітьПосиланняДляБлокуванняToolStripMenuItem";
-            this.введітьПосиланняДляБлокуванняToolStripMenuItem.Size = new System.Drawing.Size(265, 23);
-            this.введітьПосиланняДляБлокуванняToolStripMenuItem.Text = "введіть посилання для блокування";
-            this.введітьПосиланняДляБлокуванняToolStripMenuItem.Click += new System.EventHandler(this.введітьПосиланняДляБлокуванняToolStripMenuItem_Click);
-            // 
             // authorMishkaToolStripMenuItem
             // 
             this.authorMishkaToolStripMenuItem.Name = "authorMishkaToolStripMenuItem";
             this.authorMishkaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.authorMishkaToolStripMenuItem.Text = "author - Mishka:)";
             // 
+            // обраніСайтиToolStripMenuItem
+            // 
+            this.обраніСайтиToolStripMenuItem.Name = "обраніСайтиToolStripMenuItem";
+            this.обраніСайтиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.обраніСайтиToolStripMenuItem.Text = "обрані сайти";
+            // 
+            // заблокуватиСайтToolStripMenuItem
+            // 
+            this.заблокуватиСайтToolStripMenuItem.Name = "заблокуватиСайтToolStripMenuItem";
+            this.заблокуватиСайтToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.заблокуватиСайтToolStripMenuItem.Text = "заблокувати сайт";
+            this.заблокуватиСайтToolStripMenuItem.Click += new System.EventHandler(this.заблокуватиСайтToolStripMenuItem_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(484, 33);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 5;
+            this.comboBox2.Text = "заблоковані сайти";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // малюнокToolStripMenuItem
+            // 
+            this.малюнокToolStripMenuItem.Name = "малюнокToolStripMenuItem";
+            this.малюнокToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.малюнокToolStripMenuItem.Text = "малюнок";
+            this.малюнокToolStripMenuItem.Click += new System.EventHandler(this.малюнокToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 281);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
@@ -217,10 +227,11 @@
         private System.Windows.Forms.ToolStripMenuItem додомуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem обранеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem довідкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem choosenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem blockToolStripMenuItem;
-        private System.Windows.Forms.ToolStripTextBox введітьПосиланняДляБлокуванняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem authorMishkaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem обраніСайтиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem заблокуватиСайтToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ToolStripMenuItem малюнокToolStripMenuItem;
     }
 }
 

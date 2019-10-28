@@ -39,7 +39,8 @@ namespace lab2_browser
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            webBrowser1.Navigate(comboBox1.Text);
+            if(!comboBox2.Items.Contains(comboBox1.Text))
+                webBrowser1.Navigate(comboBox1.Text);
         }
 
         private void назадToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +71,35 @@ namespace lab2_browser
         private void choosenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        
+
+        private void заблокуватиСайтToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (Form2 form2 = new Form2())
+            {
+                if (form2.ShowDialog() == DialogResult.OK)
+                {
+                    this.comboBox2.Items.Add(form2.BlockingLink);
+                }
+            }
+        }
+
+        public ComboBox getBlockedSites()
+        {
+            return comboBox2;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void малюнокToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
         }
     }
 }
