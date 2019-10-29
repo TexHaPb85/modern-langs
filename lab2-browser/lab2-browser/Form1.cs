@@ -79,12 +79,10 @@ namespace lab2_browser
         {
             using (Form2 form2 = new Form2())
             {
-
-                    form2.ShowDialog();
+                form2.ShowDialog();
                 string blocked = form2.BlockingLink;
-                if(blocked.Contains(".") && blocked.Substring())
+                if(blocked.Contains("."))
                     this.comboBox2.Items.Add(blocked);
-
             }
         }
 
