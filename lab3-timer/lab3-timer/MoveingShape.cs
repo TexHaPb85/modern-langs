@@ -39,7 +39,7 @@ namespace lab3_timer
         
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
