@@ -11,7 +11,7 @@ namespace lab4_drawing
     {
         public int x;
         public int y;
-        public int scale = 3;
+        public int scale = 1;
 
         public Ship(int x, int y)
         {
@@ -23,14 +23,14 @@ namespace lab4_drawing
         {
             Point[] points = new Point[5];
             points[0] = new Point(x,y);
-            points[1] = new Point(x+5*scale, y + 20 * scale);
-            points[2] = new Point(x + 100 * scale, y);
-            points[3] = new Point(x +10 * scale, y + 20 * scale);
+            points[1] = new Point(x + (10 * scale), y + (20 * scale));
+            points[2] = new Point(x + (100 * scale), y + (20 * scale));
+            points[3] = new Point(x + (130 * scale), y);
             points[4] = new Point(x, y);
 
             Graphics graphics = Graphics.FromImage(bitmap);
             graphics.FillPolygon(Brushes.Gray, points);
-            graphics.FillRectangle(Brushes.Black, x + 10, y, 50, 20);
+            graphics.FillRectangle(Brushes.Black, x + 20*scale, y-10*scale, 50*scale, 10*scale);
         }
     }
 }

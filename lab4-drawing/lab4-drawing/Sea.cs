@@ -13,7 +13,7 @@ namespace lab4_drawing
     public partial class Sea : Form
     {
         private int shipX=0;
-        private int shipY = 300;
+        private int shipY = 250;
         public Sea()
         {
             InitializeComponent();
@@ -40,9 +40,9 @@ namespace lab4_drawing
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            shipX++;
+            shipX+=10;
             if (shipX > pictureBox1.Width)
-                shipX = 0;
+                shipX = -100;
             RedrawShip();
         }
     }
