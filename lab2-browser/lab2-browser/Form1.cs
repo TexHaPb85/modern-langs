@@ -29,7 +29,8 @@ namespace lab2_browser
 
         private void button1_Click(object sender, EventArgs e)
         {
-            webBrowser1.Navigate(textBox1.Text);
+            if (!comboBox2.Items.Contains(textBox1.Text))
+                webBrowser1.Navigate(textBox1.Text);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -81,7 +82,7 @@ namespace lab2_browser
             {
                 form2.ShowDialog();
                 string blocked = form2.BlockingLink;
-                if(blocked.Contains("."))
+                if(blocked.Contains(".") && blocked.Substring(blocked.Length - 3).Equals("com"))
                     this.comboBox2.Items.Add(blocked);
             }
         }
