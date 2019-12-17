@@ -14,6 +14,7 @@ namespace lab4_drawing
     {
         private int shipX=0;
         private int shipY = 250;
+
         public Sea()
         {
             InitializeComponent();
